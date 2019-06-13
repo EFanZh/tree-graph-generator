@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>ASCII Tree Graph Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="main.js"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            margin: 0;
+        }
+
+        #input,
+        #output {
+            flex: 1;
+            overflow: auto;
+            resize: none;
+            white-space: nowrap;
+        }
+
+        #output {
+            margin-left: 6px
+        }
+    </style>
+</head>
+
+<body>
+    <textarea id="input">{
+    "name": "lambda-exp",
+    "children": [
+        {
+            "label": "bound-var",
+            "name": "x"
+        },
+        {
+            "label": "body",
+            "name": "lambda-exp",
+            "children": [
+                {
+                    "label": "bound-var",
+                    "name": "y"
+                },
+                {
+                    "label": "body",
+                    "name": "app-exp",
+                    "children": [
+                        {
+                            "label": "rator",
+                            "name": "lambda-exp",
+                            "children": [
+                                {
+                                    "label": "bound-var",
+                                    "name": "x"
+                                },
+                                {
+                                    "label": "body",
+                                    "name": "app-exp",
+                                    "children": [
+                                        {
+                                            "label": "rator",
+                                            "name": "var-exp",
+                                            "children": [
+                                                {
+                                                    "label": "var",
+                                                    "name": "x"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "rand",
+                                            "name": "var-exp",
+                                            "children": [
+                                                {
+                                                    "label": "var",
+                                                    "name": "y"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "label": "rand",
+                            "name": "var-exp",
+                            "children": [
+                                {
+                                    "label": "var",
+                                    "name": "x"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}</textarea>
+    <textarea id="output"></textarea>
+</body>
+
+</html>
