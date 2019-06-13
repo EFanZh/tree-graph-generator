@@ -12,7 +12,7 @@
     },
     "license": "MIT",
     "author": "EFanZh <efanzh@gmail.com> (https://efanzh.org)",
-    "main": "out/main.js",
+    "main": "out/index.js",
     "repository": {
         "type": "git",
         "url": "https://github.com/EFanZh/tree-graph-generator.git"
