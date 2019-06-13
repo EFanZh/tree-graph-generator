@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - node
+os:
+  - linux
+  - osx
+before_deploy:
+  - npm run deploy
+deploy:
+    provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+        branch: master
+        condition: $TRAVIS_OS_NAME = linux
+    local_dir: public
+    keep_history: true
+notifications:
+    email: false
